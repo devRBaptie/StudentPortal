@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    if (Session["USERNAME"] == null)
+    {
+        Response.Redirect("~/Login/Index");
+    }
+
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    
+    <style>
+        #logout-div {
+            float: right;
+        }
+
+    </style>
+</head>
+<body style="background-color:whitesmoke;">
+    <h3>Welcome @Session["firstName"].ToString()</h3>
+    <div id="logout-div"> <a href=" @Url.Action("Logout", "Login")">LogOut</a>
+    </div><p><br /></p>
+    
+    <div class="jumbotron">
+        <h1>STUDENT HUB</h1>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>@Html.ActionLink("View Test Mark", "Index", "TEST_MARK")</h2>
+            <p>
+                Students are able to view their test mark here.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>@Html.ActionLink("View Test Memo", "Index", "MEMO")</h2>
+            <p>Students are able to view the tests memorandum</p>
+        </div>
+
+    </div>
+</body>
+</html>

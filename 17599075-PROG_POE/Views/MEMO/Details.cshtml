@@ -1,0 +1,57 @@
+﻿@model _17599075_PROG_POE.Models.QUIZ
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Test Memorandum</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QUESTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QUESTION)
+        </dd>
+
+        <dt>
+            SOLUTION A
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SOL_A)
+        </dd>
+
+        <dt>
+            SOLUTION B
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SOL_B)
+        </dd>
+
+        <dt>
+            SOLUTION C
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SOL_C)
+        </dd>
+
+        <dt>
+            CORRECT ANSWER
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CORRECT_ANSWER)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

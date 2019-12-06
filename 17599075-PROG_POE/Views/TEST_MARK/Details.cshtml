@@ -1,0 +1,42 @@
+﻿@model _17599075_PROG_POE.Models.STUDENT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TEST RESULT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+        <dt>
+            FIRST NAME
+        </dt>
+
+        <dd>
+            @Session["firstName"]
+        </dd>
+
+        <dt>
+            SURNAME
+        </dt>
+
+        <dd>
+            @Session["surname"]
+        </dd>
+
+        <dt>
+            TEST RESULT
+        </dt>
+
+        <dd>
+            @Session["mark"]
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<_17599075_PROG_POE.Models.STUDENT>
+
+@{
+    ViewBag.Title = "Test Result";
+}
+
+<h2>Test Result</h2>
+
+<p>
+    <br>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            FIRST NAME
+        </th>
+        <th>
+            SURNAME
+        </th>
+        <th>
+            TEST MARK
+        </th>
+        <th></th>
+    </tr>
+
+    <tr>
+        <td>
+            @Session["firstName"]
+        </td>
+        <td>
+            @Session["surname"]
+        </td>
+        <td>
+            @Session["mark"]
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id = @Session["userName"] }) 
+        </td>
+    </tr>
+
+
+</table>

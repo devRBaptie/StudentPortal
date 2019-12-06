@@ -1,0 +1,13 @@
+STUDENT LOGIN:
+
+students each have a unique student number and password.
+
+usernames , password
+
+11111 , pass1
+22222 , pass2
+33333 , pass3
+44444 , pass4
+55555 , pass5
+66666 , pass6
+77777 , pass7

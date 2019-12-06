@@ -1,0 +1,55 @@
+﻿@model IEnumerable<_17599075_PROG_POE.Models.QUIZ>
+
+@{
+    ViewBag.Title = "Memorandum";
+}
+
+<h2>Test Memorandum</h2>
+
+<p>
+    <br>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            QUESTION
+        </th>
+        <th>
+            SOLUTION A
+        </th>
+        <th>
+            SOLUTION B
+        </th>
+        <th>
+            SOLUTION C
+        </th>
+        <th>
+            CORRECT ANSWER
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.QUESTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SOL_A)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SOL_B)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SOL_C)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CORRECT_ANSWER)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) 
+        </td>
+    </tr>
+}
+
+</table>
